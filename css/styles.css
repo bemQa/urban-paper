@@ -537,7 +537,7 @@ h5,
 .menu-links-desktop {
     display: flex;
     justify-content: space-between;
-    width: calc(100% - 64rem);
+    gap: 0 32rem;
 }
 
 .menu-links-mobile {
@@ -548,12 +548,6 @@ h5,
     display: flex;
 }
 
-.menu-links-desktop .menu-links,
-.menu-links-mobile .menu-links {
-    background: var(--background-transparent01);
-    border-radius: 50rem;
-}
-
 .menu-links-desktop .menu-link,
 .menu-links-mobile .menu-link {
     position: relative;
@@ -561,8 +555,6 @@ h5,
     align-items: center;
     justify-content: center;
     height: 48rem;
-    padding: 18rem;
-    border-radius: 50rem;
     font-weight: 400;
     font-size: 16rem;
     line-height: 1;
