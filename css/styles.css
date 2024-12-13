@@ -626,34 +626,18 @@ h5,
     display: none;
     align-items: center;
     justify-content: center;
-    width: 44rem;
-    height: 44rem;
-    background: var(--background-transparent01);
-    border-radius: 50rem;
+    width: 32rem;
+    height: 14rem;
 }
 
 .menu {
     position: relative;
     display: block;
-    width: 18rem;
-    height: 10rem;
-    background-color: transparent;
+    width: 32rem;
+    height: 8rem;
     font-size: 0;
     text-indent: -999rem;
     z-index: 11;
-}
-
-.menu span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    width: 100%;
-    height: 1rem;
-    background: var(--text-color);
-    transition: background 0s .3s;
 }
 
 .menu::before,
@@ -667,8 +651,8 @@ h5,
     bottom: 0;
     margin: auto;
     width: 100%;
-    height: 1rem;
-    background: var(--text-color);
+    height: 2rem;
+    background: var(--main-color);
     transition-duration: 0.3s, 0.3s;
     transition-delay: 0.3s, 0s;
 }
@@ -685,12 +669,12 @@ h5,
 
 .menu.active::before {
     top: 0;
-    transform: rotate(45deg);
+    transform: rotate(21deg);
 }
 
 .menu.active::after {
     bottom: 0;
-    transform: rotate(-45deg);
+    transform: rotate(-21deg);
 }
 
 .menu.active::before,
@@ -710,18 +694,17 @@ h5,
 .menu-links-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     position: absolute;
-    gap: 32rem;
-    top: 50rem;
+    gap: 24rem;
+    top: 52rem;
     left: 0;
     right: 0;
     margin: auto;
     width: 100%;
-    height: fit-content;
-    max-height: calc(100vh - 50rem);
-    padding: 32rem;
-    background: var(--background-color);
+    height: calc(100vh - 52rem);
+    padding: 24rem 16rem;
+    background: var(--second-color);
     z-index: 10;
     opacity: 0;
     pointer-events: none;
@@ -736,30 +719,16 @@ h5,
     height: 0;
 }
 
-.header.active::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    backdrop-filter: blur(3rem);
-    -webkit-backdrop-filter: blur(3rem);
-    z-index: 0;
-}
-
 .menu-links-wrapper .menu-links {
     flex-direction: column;
-    align-items: center;
-    gap: 32rem;
+    align-items: flex-start;
+    gap: 24rem;
 }
 
 .menu-links-wrapper .menu-link {
     position: relative;
     width: fit-content;
-    font-family: var(--title-font);
-    font-weight: 400;
+    font-weight: 600;
     font-size: 20rem;
     line-height: 1;
     text-align: center;
@@ -787,6 +756,8 @@ h5,
 
 .cart-icon-link {
     position: relative;
+    display: flex;
+    align-items: center;
     width: auto;
     height: 18rem;
     background: url(../img/icons/cart.svg) left center/18rem no-repeat;
@@ -1853,17 +1824,17 @@ textarea.input-text {
     /* typography */
     h1,
     .h1 {
-        font-size: 24rem;
+        font-size: 40rem;
     }
     
     h2,
     .h2 {
-        font-size: 22rem;
+        font-size: 32rem;
     }
 
     h3,
     .h3 {
-        font-size: 20rem;
+        font-size: 24rem;
     }
 
     h4,
@@ -1876,25 +1847,45 @@ textarea.input-text {
         font-size: 16rem;
     }
 
-    .page-subtitle {
-        font-size: 16rem;
-        line-height: 1.3;
+    .text {
+        font-size: 14rem;
     }
-
-    .page-title + .page-subtitle {
-        margin-top: 10rem;
+    
+    .text14 {
+        font-size: 14rem;
     }
-
-    .page-text {
-        margin-top: 5rem;
+    
+    .text18 {
         font-size: 16rem;
     }
-
-    .page-text-small {
-        margin-top: 10rem;
-        font-size: 16rem;
+    
+    .text20 {
+        font-size: 18rem;
     }
     /* end typography */
+
+    .header {
+        height: 52rem;
+    }
+
+    .header-container,
+    .container,
+    .footer-container {
+        padding: 0 16rem;
+    }
+
+    .header-top {
+        gap: 0 16rem;
+    }
+
+    .logo {
+        min-width: 118rem;
+        font-size: 20rem;
+    }
+
+    .header-top .header-contacts {
+        display: none;
+    }
 
     .menu-links-desktop {
         display: none;
@@ -1905,29 +1896,115 @@ textarea.input-text {
         margin-left: auto;
     }
 
-    .menu-links-mobile .menu-link {
-        height: 44rem;
-        padding: 12rem;
+    .menu-links {
+        gap: 0 16rem;
     }
 
-    .menu-links-mobile .cart-link {
-        gap: 0 4rem;
-        font-size: 0;
-        padding-left: 32rem;
+    .phone-icon-link {
+        position: relative;
+        width: 14rem;
+        height: 14rem;
+        background: url(../img/icons/phone.svg) center/contain no-repeat;
     }
 
-    .cart-link::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 12rem;
-        bottom: 0;
-        margin: auto;
-        width: 19rem;
-        height: 19rem;
-        background: url(../img/icons/cart.svg) center/contain no-repeat;
+    .phone-icon-link:hover {
+        opacity: 0.85;
     }
 
+    .fav-icon-link {
+        width: 16rem;
+        height: 14rem;
+        background-position: center top 1rem;
+    }
+
+    .cart-icon-link {
+        height: 16rem;
+        background: url(../img/icons/cart.svg) left center / 15rem no-repeat;
+    }
+
+    .cart-notice {
+        height: 14rem;
+        margin-left: 20rem;
+        padding: 2rem 4rem;
+        font-size: 10rem;
+    }
+
+    .menu-button {
+        display: flex;
+    }
+
+    .header-contacts {
+        flex-direction: column;
+        gap: 24rem;
+    }
+
+    .header-contacts-link {
+        font-size: 16rem;
+    }
+
+    .header-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16rem;
+        width: 100%;
+        margin-top: auto;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 16rem;
+    }
+
+    .footer > .footer-container {
+        padding: 48rem 16rem;
+    }
+
+    .footer-menus {
+        flex-wrap: wrap;
+        gap: 16rem;
+        padding: 0;
+        order: -1;
+    }
+
+    .footer-menu-col {
+        max-width: 100%;
+    }
+
+    .footer-menu {
+        gap: 16rem 0;
+        max-width: 100%;
+    }
+
+    .footer-socs {
+        max-width: 100%;
+        margin-top: 16rem;
+    }
+
+    .socs {
+        gap: 8rem;
+    }
+
+    .soc {
+        width: 32rem;
+        height: 32rem;
+    }
+
+    .soc.yt,
+    .soc.tg,
+    .soc.vk {
+        background-size: 32rem;
+    }
+
+    .footer-info .text {
+        margin-top: 16rem;
+    }
+
+    .footer-copyright {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16rem 0;
+        font-size: 14rem;
+    }
 
     .ip-cell-text {
         font-size: 12rem;
@@ -1952,58 +2029,6 @@ textarea.input-text {
 
     .modal-text {
         font-size: 14rem;
-    }
-
-    .footer-menus {
-        flex-wrap: wrap;
-        columns: 2;
-        gap: 24rem 16rem;
-        padding: 24rem 0 0;
-        border-bottom: 0;
-    }
-
-    .footer-menu-col {
-        max-width: 160rem;
-    }
-
-    .footer-menu {
-        gap: 16rem 0;
-        max-width: 160rem;
-    }
-
-    .footer-menu-title,
-    .footer-menu-link {
-        font-size: 14rem;
-    }
-
-    .footer-socs {
-        max-width: 100%;
-        padding-top: 24rem;
-        border-top: 1rem solid var(--background-color);
-    }
-
-    .socs {
-        gap: 8rem;
-    }
-
-    .soc {
-        width: 40rem;
-        height: 40rem;
-    }
-
-    .soc.wa,
-    .soc.tg,
-    .soc.vk,
-    .soc.web {
-        background-size: 16rem;
-    }
-
-    .footer-copyright, 
-    .footer-copyright-links, 
-    .footer-copyright-texts {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16rem 0;
     }
 
     /* forms */
@@ -2116,22 +2141,55 @@ textarea.input-text {
     }
 
     .header + .section {
-        margin-top: 60rem;
+        margin-top: 52rem;
+    }
+
+    .section {
+        padding: 48rem 0;
+    }
+
+    .section-footer-partners {
+        padding-bottom: 0;
+    }
+
+    .footer-partners-wrapper {
+        flex-direction: column;
+    }
+
+    .footer-partners-info {
+        gap: 8rem;
+        max-width: 100%;
+        min-height: 358rem;
+        height: auto;
+        padding: 24rem;
+    }
+
+    .footer-partners-link {
+        margin-top: auto;
+        font-size: 16rem;
+    }
+
+    .footer-partners-img {
+        height: 358rem;
     }
 
     .error-page-info {
-        padding: 64rem 0;
+        padding: 64rem 0 40rem;
+        text-align: left;
     }
 
     .error-number {
-        font-size: 240rem;
+        font-size: 200rem;
     }
 
     .error-title {
-        font-size: 32rem;
+        max-width: 246rem;
+        margin: 0 auto 0 0;
+        font-size: 40rem;
     }
 
     .error-text {
+        margin: 10rem auto;
         font-size: 16rem;
     }
 
