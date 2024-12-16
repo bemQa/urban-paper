@@ -2686,56 +2686,11 @@ textarea.input-text {
     transform: scale(1);
 }
 
-.delivery-list {
-    display: flex;
-    flex-direction: column;
-    gap: 24rem 0;
-}
-
-.delivery-price {
-    display: inline-block;
-    margin-left: 16rem;
-    color: var(--text-color-transparent);
-}
-
+.delivery-list,
 .payment-list {
     display: flex;
-    flex-wrap: wrap;
-    gap: 16rem;
-}
-
-.payment-ch + .payment-label {
-    display: flex;
-    align-items: flex-start;
-    height: 100%;
-    padding: 8rem;
-    border: 1rem solid rgba(183, 203, 234, 0.2);
-    border-radius: 8rem;
-    font-size: 18rem;
-    line-height: 1.15;
-    color: var(--text-color);
-}
-
-.payment-ch:checked + .payment-label {
-    border-color: var(--accent-color);
-}
-
-.payment-label-info {
-    display: flex;
     flex-direction: column;
-    gap: 8rem 0;
-    padding: 16rem;
-}
-
-.payment-ch-text {
-    font-weight: 300;
-    font-size: 16rem;
-    color: var(--text-color-transparent);
-}
-
-.payment-label::before,
-.payment-label::after {
-    display: none;
+    gap: 16rem 0;
 }
 
 /*end main styles*/
@@ -3455,35 +3410,12 @@ textarea.input-text {
         gap: 8rem 0;
     }
 
-    .delivery-list .ch + label, 
-    .delivery-list .rd + label {
-        font-size: 14rem;
-    }
-
-    .delivery-price {
-        margin-left: 8rem;
-    }
-
-    .payment-ch + .payment-label {
-        flex-direction: column;
-        padding: 4rem;
-        font-size: 14rem;
-    }
-
-    .payment-label img {
-        width: 100%;
-    }
-
-    .payment-label-info {
-        gap: 4rem 0;
-    }
-
-    .payment-ch-text {
-        font-size: 12rem;
+    .cart-page-aside-block {
+        gap: 16rem 0;
     }
 
     .cart-page-aside-block-title {
-        font-size: 20rem;
+        font-size: 24rem;
     }
 
     .cart-page-aside-block .form-horizontal {
@@ -3498,8 +3430,13 @@ textarea.input-text {
         font-size: 16rem;
     }
 
+    .order-info-list {
+        gap: 8rem 0;
+        margin-top: 16rem;
+    }
+
     .order-info-total {
-        margin-top: 4rem;
+        margin-top: 8rem;
     }
 
     .order-info-total-title,
@@ -3508,11 +3445,7 @@ textarea.input-text {
     }
 
     .order-info-text {
-        font-size: 12rem;
-    }
-
-    .btn-order {
-        font-size: 16rem;
+        margin-top: 0;
     }
 }
 
