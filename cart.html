@@ -93,13 +93,25 @@
                 </div>
             </div>
         </section>
-        <section class="section section-cart">
+        <section class="section section-cart section-cart-page">
             <div class="container">
                 <div class="cart-page-wrapper">
                     <div class="cart-page-content">
+                        <div class="order-element-product-selection">
+                            <div class="ip-cell cart-ip-cell cart-ip-cell-all">
+                                <input type="checkbox" id="product-all" name="product" class="ch cart-ch cart-ch-all js-cart-ch-all" />
+                                <label for="product-all">Выбрать все</label>
+                            </div>
+                            <button class="remove-products-all">Удалить выбранные</button>
+                        </div>
                         <div class="cart-page-block">
                             <div class="order-element-products">
-                                <div class="order-element-product">
+                                <!-- если нужен клик по любой области для выделения элемента, то вместо дива используем label for="" -->
+                                <label for="product1" class="order-element-product">
+                                    <div class="ip-cell cart-ip-cell">
+                                        <input type="checkbox" id="product1" name="product" class="ch cart-ch" />
+                                        <label for="product1"></label>
+                                    </div>
                                     <a href="/product.html" class="order-element-product-img">
                                         <img src="img/collection-img.jpg" alt="">
                                     </a>
@@ -121,6 +133,69 @@
                                             <div class="order-element-product-info-element">
                                                 <div class="order-element-product-info-element-name">Раскладка</div>
                                                 <div class="order-element-product-info-element-text">1</div>
+                                            </div>
+                                        </div>
+                                        <div class="order-element-product-operations">
+                                            <button class="order-element-product-operation add-to-favorites">Добавить в избранное</button>
+                                            <button class="order-element-product-operation remove-product">Удалить</button>
+                                        </div>
+                                    </div>
+                                </label>
+                                <!-- если не нужен клик по любой области для выделения элемента, то используем див, а лейбл только для чекбокса -->
+                                <div class="order-element-product">
+                                    <div class="ip-cell cart-ip-cell">
+                                        <input type="checkbox" id="product2" name="product" class="ch cart-ch" />
+                                        <label for="product2"></label>
+                                    </div>
+                                    <a href="/product.html" class="order-element-product-img">
+                                        <img src="img/collection-img1.jpg" alt="">
+                                    </a>
+                                    <div class="order-element-product-info">
+                                        <a href="/product.html" class="order-element-product-name">Вариант 1</a>
+                                        <div class="order-element-product-info-list">
+                                            <div class="order-element-product-info-element">
+                                                <div class="order-element-product-info-element-name">Фактура 1</div>
+                                                <div class="order-element-product-info-element-text">Питон</div>
+                                            </div>
+                                            <div class="order-element-product-info-list">
+                                                <div class="order-element-product-info-element">
+                                                    <div class="order-element-product-info-element-name">Артикул</div>
+                                                    <div class="order-element-product-info-element-text">A 11S 1</div>
+                                                </div>
+                                                <div class="order-element-product-info-element">
+                                                    <div class="order-element-product-info-element-name">Форма</div>
+                                                    <div class="order-element-product-info-element-text">Квадрат</div>
+                                                </div>
+                                                <div class="order-element-product-info-element">
+                                                    <div class="order-element-product-info-element-name">Размер элемента</div>
+                                                    <div class="order-element-product-info-element-text">470 x 470 мм</div>
+                                                </div>
+                                                <div class="order-element-product-info-element">
+                                                    <div class="order-element-product-info-element-name">Раскладка</div>
+                                                    <div class="order-element-product-info-element-text">1</div>
+                                                </div>
+                                            </div>
+                                            <div class="order-element-product-info-element">
+                                                <div class="order-element-product-info-element-name">Фактура 2</div>
+                                                <div class="order-element-product-info-element-text">Питон 2</div>
+                                            </div>
+                                            <div class="order-element-product-info-list">
+                                                <div class="order-element-product-info-element">
+                                                    <div class="order-element-product-info-element-name">Артикул</div>
+                                                    <div class="order-element-product-info-element-text">A 11S 1</div>
+                                                </div>
+                                                <div class="order-element-product-info-element">
+                                                    <div class="order-element-product-info-element-name">Форма</div>
+                                                    <div class="order-element-product-info-element-text">Квадрат</div>
+                                                </div>
+                                                <div class="order-element-product-info-element">
+                                                    <div class="order-element-product-info-element-name">Размер элемента</div>
+                                                    <div class="order-element-product-info-element-text">470 x 470 мм</div>
+                                                </div>
+                                                <div class="order-element-product-info-element">
+                                                    <div class="order-element-product-info-element-name">Раскладка</div>
+                                                    <div class="order-element-product-info-element-text">1</div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="order-element-product-operations">
@@ -337,6 +412,14 @@
         Fancybox.close();
         Fancybox.show([{ src: "#auth-modal2", type: "inline" }]);
         reSendCode(10);
+    });
+
+    $('body').on('click', '.js-cart-ch-all', function() {
+        if($(this).prop('checked')) {
+            $('.cart-ch:not(.cart-ch-all)').prop('checked', true);
+        } else {
+            $('.cart-ch:not(.cart-ch-all)').prop('checked', false);
+        }
     });
 </script>
 
