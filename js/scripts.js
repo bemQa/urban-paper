@@ -131,43 +131,9 @@ $(document).ready(function () {
     });
 
     // sliders
-    const courses_cards = new Swiper('.courses-cards', {
-        slidesPerView: 'auto',
-        loop: true,
-        freeMode: true,
-        
-        // breakpoints: {
-        //     480: {
-        //         slidesPerView: 1,
-        //     },
-        // },
-    });
-
-    const product_slider_navs = new Swiper(".product-slider-navs", {
-        slidesPerView: 4,
-        loop: true,
-        freeMode: true,
-        watchSlidesProgress: true,
-        direction: "vertical",
-        grabCursor: true,
-    });
-    const product_slider = new Swiper(".product-slider", {
-        // slidesPerView: 1,
-        loop: true,
-        // direction: "vertical",
-        thumbs: {
-            swiper: product_slider_navs,
-        },
-        breakpoints: {
-            480: {
-                slidesPerView: 'auto',
-            },
-        },
-    });
-
-    const text_page_slider = new Swiper('.text-page-slider', {
+    const collection_slider = new Swiper('.collection-slider', {
         slidesPerView: 1,
-        loop: true,
+        loop: false,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
