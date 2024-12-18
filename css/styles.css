@@ -1557,6 +1557,8 @@ textarea.input-text {
     background: var(--main-color);
 }
 
+
+
 .footer-partners-link {
     display: inline-block;
     margin-top: 32rem;
@@ -2762,8 +2764,18 @@ span.breadcrumb {
     justify-content: center;
     max-width: 976rem;
     width: 100%;
+    height: 550rem;
     border-radius: 4rem;
     overflow: hidden;
+}
+
+.collection-img img {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .swiper-button-prev,
@@ -2891,6 +2903,8 @@ span.breadcrumb {
     display: flex;
     flex-direction: column;
     gap: 8rem 0;
+    max-width: 182rem;
+    width: 100%;
 }
 
 .compound-element-name {
@@ -2936,6 +2950,14 @@ span.breadcrumb {
 .collection-char-text {
     font-size: 16rem;
     line-height: 1.5;
+}
+
+.section-collections-other {
+    border-top: 1rem solid rgba(0, 0, 0, 0.2);
+}
+
+.collections-other-title {
+    margin-bottom: 40rem;
 }
 
 /*end main styles*/
@@ -3709,6 +3731,93 @@ span.breadcrumb {
     .tooltip {
         width: 300rem;
         font-size: 12rem;
+    }
+
+    .breadcrumb:not(:last-child)::before {
+        right: -13rem;
+        width: 5rem;
+        height: 7rem;
+    }
+
+    .breadcrumb {
+        font-size: 14rem;
+        color: rgba(34, 34, 34, .8);
+    }
+
+    .collection-page-wrapper {
+        flex-direction: column;
+        gap: 16rem 0;
+    }
+
+    .collection-img {
+        height: 448rem;
+    }
+
+    .collection-slider .swiper-button-prev, 
+    .collection-slider .swiper-button-next {
+        display: none;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom, .swiper-pagination-fraction {
+        gap: 4rem;
+    }
+
+    .swiper-pagination-bullet {
+        height: 3rem;
+    }
+
+    .collection-info-block {
+        padding: 24rem;
+    }
+
+    .collection-page-info-block {
+        gap: 32rem 0;
+        margin-top: 32rem;
+    }
+
+    .collection-page-info-wrapper {
+        gap: 16rem 0;
+    }
+
+    .compound-element {
+        max-width: 100%;
+    }
+
+    .compound-element-img {
+        width: 64rem;
+        height: 64rem;
+    }
+
+    .compound-element-info {
+        max-width: 278rem;
+    }
+
+    .compound-element-name {
+        font-size: 18rem;
+    }
+
+    .compound-element-text {
+        font-size: 14rem;
+        line-height: 1;
+    }
+
+    .collection-char {
+        max-width: 100%;
+        padding-left: 30rem;
+    }
+
+    .collection-char-img {
+        width: 14rem;
+    }
+
+    .collection-char-name {
+        font-size: 16rem;
+    }
+
+    .collections-other-title {
+        margin-bottom: 24rem;
     }
 }
 
