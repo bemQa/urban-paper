@@ -168,12 +168,16 @@ $(document).ready(function () {
     // parallax
     let parallax = document.querySelectorAll('.parallax');
     if(parallax.length) {
-        new SimpleParallax(parallax, {
+        let parallax_instance = new SimpleParallax(parallax, {
             // delay: 0.2,
             orientation: 'down',
             scale: 1.4,
-            // transition: 'linear'
+            // maxTransition: 60,
+            transition: 'transform'
         });
+        if($(window).innerWidth() <= 480) {
+            parallax_instance.destroy();
+        }
     }
 
     // animation

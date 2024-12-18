@@ -4063,6 +4063,10 @@ span.breadcrumb {
         border-top: 1rem solid rgba(0, 0, 0, 0.2);
     }
 
+    .main-slide-img {
+        height: 448rem;
+    }
+
     .about-wrapper {
         gap: 24rem 0;
     }
