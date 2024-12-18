@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css"/>
 	<link rel="stylesheet" href="libs/fancybox/fancybox.css"/>
 	<link rel="stylesheet" href="libs/simplebar/simplebar.css"/>
+    <link rel="stylesheet" href="libs/animate.css/animate.min.css"/>
 	<link rel="stylesheet" href="fonts/stylesheet.css"/>
 	<link rel="stylesheet" href="css/styles.css"/>
 
@@ -84,7 +85,7 @@
 				</div>
 			</div>
         </header>
-        <section class="section section-mainpage-info">
+        <section class="section section-mainpage-info pb0">
             <div class="container">
                 <div class="page-info-wrapper">
                     <div class="page-info">
@@ -96,31 +97,31 @@
         </section>
         <section class="section section-mainslider">
             <div class="container">
-                <div class="collection-slider main-slider swiper">
+                <div class="collection-slider main-slider swiper animateMe" data-animation="fadeIn">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <a href="img/main-img.jpg" class="main-slide-img" data-fancybox="main_gallery">
-                                <img src="img/main-img.jpg" alt="Название">
+                                <img src="img/main-img.jpg" alt="Название" class="parallax">
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="img/main-img.jpg" class="main-slide-img" data-fancybox="main_gallery">
-                                <img src="img/main-img.jpg" alt="Название">
+                                <img src="img/main-img.jpg" alt="Название" class="parallax">
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="img/main-img.jpg" class="main-slide-img" data-fancybox="main_gallery">
-                                <img src="img/main-img.jpg" alt="Название">
+                                <img src="img/main-img.jpg" alt="Название" class="parallax">
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="img/main-img.jpg" class="main-slide-img" data-fancybox="main_gallery">
-                                <img src="img/main-img.jpg" alt="Название">
+                                <img src="img/main-img.jpg" alt="Название" class="parallax">
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="img/main-img.jpg" class="main-slide-img" data-fancybox="main_gallery">
-                                <img src="img/main-img.jpg" alt="Название">
+                                <img src="img/main-img.jpg" alt="Название" class="parallax">
                             </a>
                         </div>
                     </div>
@@ -130,24 +131,24 @@
                 </div>
             </div>
         </section>
-        <section class="section">
+        <section class="section section-about">
             <div class="container">
-                <div class="h2">О компании</div>
+                <div class="about-title h2 animateMe" data-animation="fadeInUp">О компании</div>
                 <div class="about-wrapper">
-                    <div class="about-block">
-                        <div class="about-block-text">
+                    <div class="about-block animateMe" data-animation="fadeInUp">
+                        <div class="about-block-text text text18">
                             <p>В 2022 году коллектив творческих и амбициозных художников-декораторов с многолетним опытом работы по созданию и нанесению декоративных фактур из красок и штукатурок задумал перенести свой ручной труд на флизелиновую основу и создать новый тип обоев.</p>
                             <p>Мы старались составить удивительные сочетания элементов и текстур, разрабатывали размерные линейки и варианты раскладки для простого монтажа на стене. Вся линейка обоев имеет сертификаты качества.</p>
                         </div>
-                        <div class="about-block-img">
-                            <img src="img/about-img.jpg" alt="">
-                        </div>
+                        <a href="img/about-img.jpg" class="about-block-img" data-fancybox="">
+                            <img src="img/about-img.jpg" alt="" class="parallax">
+                        </a>
                     </div>
-                    <div class="about-block">
-                        <div class="about-block-img">
-                            <img src="img/about-img1.jpg" alt="">
-                        </div>
-                        <div class="about-block-text">
+                    <div class="about-block animateMe" data-animation="fadeInUp">
+                        <a href="img/about-img1.jpg" class="about-block-img" data-fancybox="">
+                            <img src="img/about-img1.jpg" alt="" class="parallax">
+                        </a>
+                        <div class="about-block-text text text18">
                             <p>Дизайнеры оценили продукт за возможность расставлять яркие акценты, делать жилые пространства более уютными, а общественные интерьеры более привлекательными.</p>
                             <p>Мы предлагаем покупателям выбрать готовое решение или самостоятельно разработать неповторимое настенное покрытие для своего дома.</p>
                         </div>
@@ -157,8 +158,8 @@
         </section>
         <section class="section section-collections-mainpage">
             <div class="container">
-                <div class="h2">Коллекции</div>
-                <div class="collections-list">
+                <div class="collections-mainpage-title h2 animateMe" data-animation="fadeInUp">Коллекции</div>
+                <div class="collections-list animateMe" data-animation="fadeInUp">
                     <a href="" class="collection-element collection-element-mainpage">
                         <div class="collection-element-img">
                             <img src="img/collection-img1.jpg" alt="Название коллекции">
@@ -206,19 +207,22 @@
         </section>
         <section class="section section-advantages">
             <div class="container">
-                <div class="h2">Что делает покрытия Urban Paper идеальными для любого интерьера</div>
-                <div class="advantages">
-                    <div class="advantage">
-                        <div class="advantage-title">Экологичность</div>
-                        <div class="advantage-text">В качестве основы используются флизелин — натуральный материал из прессованных целлюлозных волокон и лакокрасочные материалы на водной основе.</div>
-                    </div>
-                    <div class="advantage">
-                        <div class="advantage-title">Простой монтаж</div>
-                        <div class="advantage-text">Покрытия Urban Paper требуют минимальной подготовки стен и легко монтируются, в том числе на радиусные поверхности. Плотная флизелиновая основа скрывает недостатки поверхности и нитевидные трещины.</div>
-                    </div>
-                    <div class="advantage">
-                        <div class="advantage-title">Отличные потребительские качества</div>
-                        <div class="advantage-text">Устойчивость к механическим повреждениям и солнечному свету, возможность влажной уборки</div>
+                <div class="advantages-block animateMe" data-animation="fadeInUp">
+                    <img src="img/bg-advantages.jpg" alt="" class="advantages-bg">
+                    <div class="advantages-title h2">Что делает покрытия <br>Urban Paper идеальными для любого интерьера</div>
+                    <div class="advantages">
+                        <div class="advantage">
+                            <div class="advantage-title">Экологичность</div>
+                            <div class="advantage-text text text18">В качестве основы используются флизелин — натуральный материал из прессованных целлюлозных волокон и лакокрасочные материалы на водной основе.</div>
+                        </div>
+                        <div class="advantage">
+                            <div class="advantage-title">Простой монтаж</div>
+                            <div class="advantage-text text text18">Покрытия Urban Paper требуют минимальной подготовки стен и легко монтируются, в том числе на радиусные поверхности. Плотная флизелиновая основа скрывает недостатки поверхности и нитевидные трещины.</div>
+                        </div>
+                        <div class="advantage">
+                            <div class="advantage-title">Отличные потребительские качества</div>
+                            <div class="advantage-text text text18">Устойчивость к механическим повреждениям и солнечному свету, возможность влажной уборки</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -357,6 +361,7 @@
 <script src="libs/jquery.validate.min.js"></script>
 <script src="libs/simpleParallaxVanilla.umd.js"></script>
 <script src="libs/jquery.countdown.min.js"></script>
+<script src="libs/jquery.waypoints.min.js"></script>
 <script src="js/scripts.js"></script>
 <!-- глобальная переменная для счетчика -->
 <script>

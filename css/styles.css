@@ -2968,6 +2968,21 @@ span.breadcrumb {
     margin-bottom: 40rem;
 }
 
+.section-mainpage-info {
+    padding-top: 180rem;
+}
+
+.section-mainpage-info .h1 {
+    font-size: 72rem;
+}
+
+.mainpage-text {
+    max-width: 480rem;
+    width: 100%;
+    font-size: 20rem;
+    line-height: 1.5;
+}
+
 .main-slider {
     max-width: 100%;
     width: 100%;
@@ -3065,6 +3080,102 @@ span.breadcrumb {
 
 .section-collections-mainpage .btn-go:hover {
     background-position: right 44rem top 30rem;
+}
+
+.about-title {
+    margin-bottom: 16rem;
+}
+
+.collections-mainpage-title {
+    margin-bottom: 40rem;
+}
+
+.advantages-block {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0 16rem;
+    width: 100%;
+    height: 1528rem;
+    padding: 64rem;
+    /* background: url(../img/bg-advantages.jpg) center/cover no-repeat; */
+    border-radius: 4rem;
+    overflow: hidden;
+    color: var(--text-white-color);
+}
+
+.advantages-bg {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.advantages-title {
+    position: relative;
+    max-width: 595rem;
+    width: 100%;
+}
+
+.advantages {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16rem 0;
+    counter-reset: num;
+}
+
+.advantage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16rem 0;
+    max-width: 664rem;
+    width: 100%;
+    padding: 32rem 32rem 32rem 96rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(6rem);
+    -webkit-backdrop-filter: blur(6rem);
+    border: 1rem solid rgba(255, 255, 255, 0.1);
+    counter-increment: num;
+}
+
+.advantage::before {
+    content: counter(num);
+    position: absolute;
+    top: 32rem;
+    left: 32rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40rem;
+    height: 40rem;
+    border-radius: 50rem;
+    background: var(--second-color);
+    font-weight: 600;
+    font-size: 18rem;
+    line-height: 1;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.advantage-title {
+    font-weight: 600;
+    font-size: 24rem;
+    line-height: 1;
+}
+
+.advantage-text {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.animateMe {
+    opacity: 0;
 }
 
 /*end main styles*/
@@ -3926,6 +4037,105 @@ span.breadcrumb {
     .collections-other-title {
         margin-bottom: 24rem;
     }
+
+    .section-mainpage-info {
+        padding-top: 64rem;
+    }
+
+    .section-mainpage-info .h1 {
+        font-size: 40rem;
+    }
+
+    .mainpage-text {
+        font-size: 16rem;
+    }
+
+    .section-mainslider,
+    .section-about,
+    .section-collections-mainpage,
+    .section-advantages {
+        padding: 32rem 0 48rem;
+    }
+
+    .section-about,
+    .section-collections-mainpage,
+    .section-advantages {
+        border-top: 1rem solid rgba(0, 0, 0, 0.2);
+    }
+
+    .about-wrapper {
+        gap: 24rem 0;
+    }
+
+    .about-block {
+        flex-direction: column;
+        gap: 24rem 0;
+    }
+
+    .about-block-text {
+        padding: 0;
+        order: -1;
+    }
+
+    .about-block-img {
+        max-width: 100%;
+        height: 358rem;
+    }
+
+    .collection-element-mainpage {
+        gap: 8rem 0;
+    }
+
+    .collection-element-mainpage .collection-element-title {
+        font-size: 24rem;
+    }
+
+    .collection-element-text {
+        font-size: 14rem;
+    }
+
+    .section-collections-mainpage .buttons {
+        margin-top: 24rem;
+    }
+
+    .section-collections-mainpage .btn-go {
+        padding: 18rem 48rem 18rem 36rem;
+        background-position: right 36rem top 24rem;
+        font-size: 16rem;
+    }
+
+    .section-collections-mainpage .btn-go:hover {
+        background-position: right 32rem top 24rem;
+    }
+
+    .advantages-block {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 24rem 0;
+        padding: 24rem;
+    }
+
+    .advantages-title {
+        font-size: 24rem;
+    }
+
+    .advantage {
+        gap: 8rem 0;
+        padding: 64rem 16rem 16rem 16rem;
+    }
+
+    .advantage::before {
+        top: 16rem;
+        left: 16rem;
+        width: 32rem;
+        height: 32rem;
+        font-size: 16rem;
+    }
+
+    .advantage-title {
+        font-size: 20rem;
+        line-height: 1.15;
+    }
 }
 
 @media (max-width: 390px) {
@@ -3983,11 +4193,5 @@ span.breadcrumb {
 
 .ml0 {
     margin-left: 0;
-}
-
-@media (max-width: 480px) {
-    .pr0-mobile {
-        padding-right: 0;
-    }
 }
 /* end indentation */

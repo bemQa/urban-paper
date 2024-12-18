@@ -164,4 +164,41 @@ $(document).ready(function () {
             }
         });
     }
+
+    // parallax
+    let parallax = document.querySelectorAll('.parallax');
+    if(parallax.length) {
+        new SimpleParallax(parallax, {
+            // delay: 0.2,
+            orientation: 'down',
+            scale: 1.4,
+            // transition: 'linear'
+        });
+    }
+
+    // animation
+    function scrollWaypointInit(items, trigger) {
+        items.each(function() {
+            var element = $(this),
+                osAnimationClass = element.data("animation"),
+                osAnimationDelay = element.attr('data-animation-delay');
+    
+            element.css({
+                '-webkit-animation-delay': osAnimationDelay,
+                '-moz-animation-delay': osAnimationDelay,
+                'animation-delay': osAnimationDelay
+            });
+    
+            var trigger = (trigger) ? trigger : element;
+    
+            trigger.waypoint(function() {
+                element.addClass('animate__animated').addClass('animate__' + osAnimationClass);
+            }, {
+                // triggerOnce: true,
+                offset: '80%'
+            });
+        });
+    }
+
+    scrollWaypointInit($('.animateMe'));
 });
