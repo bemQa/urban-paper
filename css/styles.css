@@ -3178,6 +3178,39 @@ span.breadcrumb {
     opacity: 0;
 }
 
+.calculator-wrapper {
+    display: flex;
+    align-items: flex-start;
+    background: var(--background-gray-color);
+    border-radius: 4rem;
+}
+
+.calculator-img {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1182rem;
+    width: 100%;
+    height: 642rem;
+}
+
+.calculator-img img {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.calculator-block {
+    display: flex;
+    flex-direction: column;
+    gap: 24rem 0;
+    padding: 32rem;
+}
+
 /*end main styles*/
 
 /*adaptive styles*/
