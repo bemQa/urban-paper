@@ -205,4 +205,71 @@ $(document).ready(function () {
     }
 
     scrollWaypointInit($('.animateMe'));
+
+    // CLICK ON LABEL -> CHECK PREV CHECKBOX
+    $('body').on('click', '.dropdown-item-text', function() {
+        $(this).siblings('.dropdown-ch').click();
+    });
+
+    $('body').on('click', function (e) {
+        let div = $('.dropdown-item, .dropdown-list');
+
+        if (!div.is(e.target) && div.has(e.target).length === 0) {
+            $('.dropdown-box').removeClass('active');
+        }
+    });
+
+    // CUSTOM SELECT
+    $('.dropdown-link').each(function() {
+        let placeholder = $(this).data('placeholder');
+        $(this).html(`<span>${placeholder}</span>`);
+    });
+
+    $('.dropdown-link').click(function() {
+        let box = $(this).closest('.dropdown-box');
+        if (!box.hasClass('active')) {
+            $('.dropdown-box.active').removeClass('active');
+            box.addClass('active');
+        } else {
+            $('.dropdown-box.active').removeClass('active');
+        }
+
+        return false;
+    });
+
+    $('.dropdown-ch').change(function() {
+        let box = $(this).closest('.dropdown-box');
+        let link = box.find('.dropdown-link');
+        let selected = [];
+        box.find('.dropdown-ch:checked').each(function() {
+            let text = $(this).siblings('.dropdown-item-text').html();
+            selected.push(text);
+        });
+
+        if (selected != '') {
+            link.html(selected.join(', '));
+            link.addClass('chosen');
+        } else {
+            link.html(link.data('placeholder'));
+            link.removeClass('chosen');
+        }
+
+    });
+
+    $('.dropdown-box').each(function() {
+        let link = $(this).find('.dropdown-link');
+        let placeholder = link.data('placeholder');
+        let selected = [];
+
+        $(this).find('.dropdown-ch:checked').each(function() {
+            let text = $(this).siblings('.dropdown-item-text').html();
+            selected.push(text);
+        });
+
+        if (selected != '') {
+            link.html(selected.join(', '));
+        } else {
+            link.html(`<span>${placeholder}</span>`);
+        }
+    });
 });
